@@ -121,6 +121,9 @@ ENV CLING_STANDARD_PCH none
 
 RUN python3 -m pip install rucio-clients 
 
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main \
+ && conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+
 #RUN python3 -m pip install correctionlib
 #RUN conda install -y  correctionlib
 RUN conda install -y -c conda-forge correctionlib
