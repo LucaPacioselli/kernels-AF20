@@ -7,7 +7,7 @@ RUN apt-get update && \
     git curl sudo wget vim 
 
 RUN curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh"
-RUN bash Miniforge3-Linux-x86_64.sh -b -p $CONDA_DIR
+RUN bash Miniforge3-Linux-x86_64.sh -b -p /opt/conda
 
 # Put conda in path so we can use conda activate
 ENV PATH=$CONDA_DIR/bin:$PATH
